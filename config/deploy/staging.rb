@@ -1,3 +1,15 @@
+role :app, %w{"deploy@whpihdev"}
+role :web, %w{"deploy@whpihdev"}
+role :db, %w{"deploy@whpihdev"}, :primary -> true
+set :branch, "master"
+set :rails_env, "staging"
+set :deploy_to, "/home/deploy/Apps"
+
+
+
+
+
+
 # server-based syntax
 # ======================
 # Defines a single server with a list of roles and multiple properties.

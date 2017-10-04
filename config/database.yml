@@ -9,6 +9,12 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
+staging:
+  <<: *default
+  database: rails_basic_staging
+  username: deploy
+  password <%= ENV["DATABASE_PASSWORD"] %>
+
 development:
   <<: *default
   database: db/development.sqlite3
