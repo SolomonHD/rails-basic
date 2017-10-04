@@ -1,8 +1,11 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
 
-set :application, "my_app_name"
-set :repo_url, "git@example.com:me/my_repo.git"
+set :application, "rails_basic"
+set :repo_url, "git@github.com:SolomonHD/rails-basic"
+set :user, "shilli2"
+set :stages, %w(staging)
+set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids','tmp/cache','tmp/sockets','vendor/bundle', 'public/system')
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
