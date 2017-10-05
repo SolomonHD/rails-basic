@@ -1,9 +1,9 @@
 # config valid only for current version of Capistrano
 lock "3.9.1"
-
+#default_environment['PATH'] = '/opt/rh/rh-git29/root/usr/bin:/opt/rh/rh-ruby24/root/usr/local/bin:/opt/rh/rh-ruby24/root/usr/bin'
 set :application, "rails_basic"
 set :repo_url, "git@github.com:SolomonHD/rails-basic"
-set :user, "shilli2"
+set :user, "deploy"
 set :stages, %w(staging)
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids','tmp/cache','tmp/sockets','vendor/bundle', 'public/system')
 
@@ -32,6 +32,10 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids','tmp/cache','tm
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
+set :default_env, {
+    'LD_LIBRARY_PATH' => "/opt/rh/rh-ruby24/root/usr/lib64:$LD_LIBRARY_PATH",
+    'PATH' => "/opt/rh/rh-git29/root/usr/bin:/opt/rh/rh-ruby24/root/usr/local/bin:/opt/rh/rh-ruby24/root/usr/bin:/opt/rh/rh-ruby24/root/usr/lib64:$PATH"
+}
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
 
