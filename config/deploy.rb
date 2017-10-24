@@ -39,7 +39,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids','tmp/cache','tm
 
 set :default_env, {
     'LD_LIBRARY_PATH' => "/opt/rh/rh-ruby24/root/usr/lib64:/opt/rh/rh-nodejs6/root/usr/lib64:$LD_LIBRARY_PATH",
-    'PATH' => "/opt/rh/rh-git29/root/usr/bin:/opt/rh/rh-ruby24/root/usr/local/bin:/opt/rh/rh-ruby24/root/usr/bin:/opt/rh/rh-ruby24/root/usr/lib64:/opt/rh/rh-nodejs6/root/usr/bin:$PATH"
+    'PATH' => "/opt/rh/rh-git29/root/usr/bin:/opt/rh/rh-ruby24/root/usr/local/bin:/opt/rh/rh-ruby24/root/usr/bin:/opt/rh/rh-ruby24/root/usr/lib64:/opt/rh/rh-nodejs6/root/usr/bin:/opt/rh/rh-ruby24/root/usr/local/share/gems/gems:$PATH"
 }
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
