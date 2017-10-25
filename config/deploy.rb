@@ -34,7 +34,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids','tmp/cache','tm
 
 set :default_env, {
     'LD_LIBRARY_PATH' => "/paths/ruby-lib-current:/paths/nodejs-lib-current:$LD_LIBRARY_PATH",
-	'PATH' => "/paths/git-current:/paths/ruby-current:/paths/nodejs-current::$PATH"
+	'PATH' => "/paths/git-current:/paths/ruby-current:/paths/nodejs-current:/paths/ruby-lib-current:$PATH"
 }
 
 #set :default_env, {
