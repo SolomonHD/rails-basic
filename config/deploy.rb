@@ -37,13 +37,6 @@ set :default_env, {
 	'PATH' => "/paths/git-current:/paths/ruby-current:/paths/nodejs-current:$PATH"
 }
 
-#set :default_env, {
-#    'LD_LIBRARY_PATH' => "/opt/rh/rh-ruby24/root/usr/lib64:/opt/rh/rh-nodejs6/root/usr/lib64:$LD_LIBRARY_PATH",
-#    'PATH' => "/opt/rh/rh-git29/root/usr/bin:/opt/rh/rh-ruby24/root/usr/local/bin:/opt/rh/rh-ruby24/root/usr/bin:/opt/rh/rh-ruby24/root/usr/lib64:/opt/rh/rh-nodejs6/root/usr/bin:/opt/rh/rh-ruby24/root/usr/local/share/gems/gems:/opt/rh/rh-ruby24/root/usr/local/share/gems/:$PATH"
-#}
 # Default value for local_user is ENV['USER']
 # set :local_user, -> { `git config user.name`.chomp }
 
-# Default value for keep_releases is 5
-# set :keep_releases, 5
-# test 5 with NO lib in PATH
