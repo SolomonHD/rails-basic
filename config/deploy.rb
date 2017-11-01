@@ -34,7 +34,7 @@ set :passenger_restart_with_touch, true
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
 set :default_env, {
-    'LD_LIBRARY_PATH' => "/paths/ruby-lib-current:/paths/nodejs-lib-current:$LD_LIBRARY_PATH",
+#    'LD_LIBRARY_PATH' => "/paths/ruby-lib-current:/paths/nodejs-lib-current:$LD_LIBRARY_PATH",
 	'PATH' => "/paths/git-current:/paths/ruby-current:/paths/nodejs-current:$PATH"
 }
 

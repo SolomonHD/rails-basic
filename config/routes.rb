@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :money
   get 'welcome/index'
 
   root 'welcome#index'
