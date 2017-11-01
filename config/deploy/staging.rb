@@ -3,7 +3,7 @@ role :web, %w{deploy@whpihdev1}
 role :db, %w{deploy@whpihdev1}, :primary => true
 set :branch, "master"
 set :rails_env, "development"
-set :deploy_to, "/home/deploy/Apps"
+set :deploy_to, "/home/deploy/Apps/rails_basic"
 
 
 
